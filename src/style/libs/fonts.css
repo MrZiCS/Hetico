@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'ArialRoundedMTProCyr';
+  src: url('../../fonts/arial/ArialRoundedMTProCyr.eot');
+  src: url('../../fonts/arial/ArialRoundedMTProCyr.eot?#iefix') format('embedded-opentype'),
+       url('../../fonts/arial/ArialRoundedMTProCyr.svg#ArialRoundedMTProCyr') format('svg'),
+       url('../../fonts/arial/ArialRoundedMTProCyr.ttf') format('truetype'),
+       url('../../fonts/arial/ArialRoundedMTProCyr.woff') format('woff'),
+       url('../../fonts/arial/ArialRoundedMTProCyr.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');

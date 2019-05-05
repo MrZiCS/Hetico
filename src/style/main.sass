@@ -1,0 +1,605 @@
+@import "libs/normalize.css"
+@import "libs/fonts.css"
+@import "libs/hetico.css"
+
+
+body 
+	font-family: 'Open Sans', sans-serif
+	margin: 0
+	padding: 0
+	font-size: 14px
+	line-height: normal
+	overflow-x: hidden
+
+* 
+	box-sizing: border-box
+
+.container 
+	width: calc(100% - 360px)
+	min-width: 1200px
+	margin: auto
+
+a 	
+	text-decoration: none
+	color: #FFFFFF
+
+h1, h2, h3, h4, h5, h6 
+	font-family: 'ArialRoundedMTProCyr', sans-serif
+
+h3 
+	color: #28348B
+	font-size: 55px
+	text-transform: uppercase
+
+
+.btn 
+	color: #FFFFFF
+	background: linear-gradient(180deg, #52AE32 0%, #357B1D 100%)
+	border-radius: 5px
+	border: 0
+	text-align: center
+	padding: 10px
+	font-weight: 600
+	font-size: 12px
+	line-height: 16px
+
+.hetico-title .title-content h1,
+.hetico-title .title-content p,
+.hetico-title .title-content p span,
+.btn 
+	text-transform: uppercase
+
+/* Header ------------------------------------------------------------------------------------------------------------ */
+.nav-menu 
+	width: 100%
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 99
+	transition: .4s
+
+	nav 
+		font-family: 'ArialRoundedMTProCyr', 'Open Sans'
+		padding: 20px 0 0
+		display: flex
+		justify-content: end
+		align-items: center
+		text-transform: uppercase
+		transition: .4s
+		
+		.main-logo 
+			padding: 0
+			margin: 0
+			display: flex
+			height: 80px
+
+		ol 
+			display: flex
+			justify-content: end
+			align-items: center
+			list-style-type: none
+			padding: 0
+			margin: 0 80px
+			
+			li 
+				padding: 0 20px
+
+		.lang 
+			position: relative
+			display: flex
+
+			ol 
+				flex-direction: column
+				position: absolute
+				opacity: 0
+				top: 0
+				left: 0
+				margin: 0
+				transition: .4s
+			&:hover ol
+				opacity: 1
+				top: 20px
+				transition: .4s
+			/*When menu scroll*/
+.scroll 
+	background-color: rgba(24, 34, 111, 0.8)
+	transition: .4s
+
+	nav 
+		padding: 0
+		transition: .4s
+/* Title ------------------------------------------------------------------------------------------------------------ */
+.hetico-title 
+	width: 100%
+	position: relative
+	display: flex
+	flex-direction: column
+	color: #FFFFFF
+
+	> * 
+		position: relative
+		z-index: 2
+
+	> svg 
+		position: absolute
+		z-index: 1
+		width: 100%
+		height: auto
+		top: 0
+		left: 0
+	
+	.title-content 
+		padding-top: 200px
+
+		h1 
+			font-weight: 300
+			font-size: 64px
+			line-height: 70px
+			margin: 0 0 60px
+
+		p 
+			font-weight: bold
+			font-size: 48px
+			line-height: normal
+			margin: 0 0 50px
+
+			span 
+				font-weight: normal
+				font-size: 48px
+				line-height: normal
+
+	form 
+		width: 330px
+		display: flex
+		flex-direction: column
+		background: #18226F
+		box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2)
+		border-radius: 10px
+		padding: 20px
+
+		.btn 
+			min-width: 220px
+			line-height: normal
+			margin-top: 20px
+
+		.btn:hover 
+			color: #2E7616
+			background: #FFFFFF
+
+		a i 
+			margin-right: 5px
+		
+		label,
+		input,
+		select 
+			width: 100%
+			padding: 5px 10px
+			border: 0
+			text-align: left
+
+		input, select 
+			height: 30px
+			border-radius: 5px
+		
+		label 
+			margin: 10px 0 5px 0
+			font-weight: 300
+			font-size: 12px
+			padding: 0
+
+
+		label:first-child 
+			margin: 0 0 5px 0
+
+
+/* Content ------------------------------------------------------------------------------------------------------------ */
+/* Works ------------------------------------------------------------------------------------------------------------ */
+.hetico-works 
+	position: relative
+
+	&::before 
+		content: url(../img/plane.svg)
+		position: absolute
+		top: 0
+		left: 0
+		z-index: -1
+		transform: rotate(-1.7deg)
+
+	.container 
+		padding-right: 15%
+		display: flex
+		flex-direction: column
+		align-items: center
+
+	h3 
+		width: 100%
+		text-align: left
+
+	.work-block-items 
+		display: flex
+		margin-bottom: 40px
+		width: 100%
+		justify-content: space-between
+		position: relative
+
+		.work-block-item 
+			width: 33.3%
+			display: flex
+			flex-direction: column
+			position: relative
+
+			&:last-child .works-item::after 
+    			content: none	
+
+			.works-item 
+				width: 100%
+				max-width: 300px
+				background: #28348B
+				border-radius: 100%
+				border: 10px solid #C9CFF5
+				position: relative
+				z-index: 2
+				display: flex
+				flex-direction: column
+				align-items: center
+				justify-content: center
+
+				&::before
+					display: block
+					content: ''
+					position: absolute
+					width: 90%
+					height: 90%
+					top: 0
+					left: 0
+					right: 0
+					bottom: 0
+					margin: auto
+					border-radius: 100%
+					background: #253193
+					z-index: -1
+
+				&::after
+					content: '\e801'
+					font-family: 'hetico'
+					font-size: 24px
+					color: #B6BBDD
+					position: absolute
+					top: 0
+					bottom: 0
+					left: calc(100% + 35px)
+					width: 25px
+					height: 25px
+					margin: auto
+
+				&::last-child 
+					margin: 0
+
+			p 
+				display: flex
+				font-weight: 600
+				font-size: 18px
+				line-height: 20px
+				color: #28348B
+				margin: 40px 0 0
+				text-align: center
+				max-width: 300px
+
+	.click-me
+		border-radius: 5px
+		border: 0
+		text-align: center
+		text-transform: uppercase
+		padding: 10px 40px
+		background: linear-gradient(180deg, #52AE32 0%, #357B1D 100%) 
+		margin: 0 75px 50px 0
+		
+		i
+			margin-right: 10px
+
+	.dog-img
+		right: 0
+		z-index: -1
+		bottom: 0
+		position: absolute
+
+/* Case ------------------------------------------------------------------------------------------------------------ */
+.hetico-case 
+	background: #52AE32
+	position: relative
+	display: flex
+	justify-content: center
+
+
+	.case-block 
+		display: flex
+		flex-wrap: wrap
+		position: relative
+		width: 70%
+
+		&::before 
+			content: ''
+			width: 66.6%
+			height: 5px
+			background: #3B8A20
+			position: absolute
+			left: 0
+			top: 142px
+			margin: auto
+			border: 0
+			right: 0
+		
+
+		.case-wrapper 
+			width: 33.3%
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: center
+			position: relative
+			z-index: 2
+			padding: 50px 0
+
+			h4, p
+
+				text-transform: uppercase
+				font-size: 18px
+				margin: 0
+
+			h4 
+				color: #2E7616
+				padding: 0
+			
+			p 
+				font-family: 'ArialRoundedMTProCyr', 'Open Sans'
+				color: #FFFFFF
+				padding: 10px 0 20px
+
+			.case-circle 
+				width: 40px
+				height: 40px
+				background: #FFFFFF
+				border-radius: 100%
+				border: 10px solid #2E7616
+
+			.case-option
+				font-size: 12px
+				line-height: normal
+				text-transform: lowercase
+				position: absolute
+				top: 185px
+
+			.btn-case
+				background: #2E7616
+				margin-top: 60px
+				min-width: 165px
+
+
+
+/* Advantages	------------------------------------------------------------------------------------------------------------ */
+.hetico-advantages 
+	background: #263183
+	position: relative
+	display: flex
+
+
+	.advantages-wrapper 
+		width: calc(50vw - 50px)
+		position: relative
+		overflow: hidden
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		z-index: 1
+		margin: 75px 0 75px 100px
+
+		&::after 
+			content: url("../img/back-plane-item.svg")
+			position: absolute
+			left: 35%
+			top: 10%
+			z-index: -1
+
+		h3 
+			font-size: 45px
+			line-height: 65px
+			color: #FFFFFF
+
+		.content 
+			left: -35px
+			position: relative
+			display: flex
+
+		.number 
+			font-size: 90px
+			color: #86DD68
+			font-weight: 900
+			font-family: sans-serif
+
+		p 
+			font-size: 18px
+			line-height: 25px
+			color: #FFFFFF
+			max-width: 320px
+			margin: 30px 0 0 10px
+
+
+		.btn-advantages 
+			min-width: 300px
+			margin-top: 40px
+
+
+	.plane-image 
+		background: url("../img/plane-back.png") no-repeat center right
+		width: calc(50vw + 58px)
+		background-size: cover
+
+/* 	Company------------------------------------------------------------------------------------------------------------ */
+.hetico-company 
+	background: #52AE32
+	display: flex
+
+
+	.company-img 
+		background-image: url("../img/handshake.png")
+		width: 50vw
+		background-position: center
+		background-repeat: no-repeat
+		background-size: cover
+
+	.company-wrapper 
+		width: calc(50vw - 75px)
+		position: relative
+		overflow: hidden
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		margin: 75px 0 75px 75px
+		z-index: 1
+
+		&::after 
+			content: url("../img/back-plane-section.svg")
+			position: absolute
+			left: 35%
+			top: 10%
+			z-index: -1
+
+		h3 
+			font-size: 45px
+			line-height: 66px
+			text-transform: uppercase
+			color: #FFFFFF
+		
+		.content 
+			left: -35px
+			position: relative
+			display: flex
+
+		.number 
+			font-size: 90px
+			color: #86DD68
+			font-weight: 900
+			font-family: sans-serif
+
+		p 
+			font-size: 18px
+			line-height: 25px
+			color: #FFFFFF
+			max-width: 435px
+			margin: 30px 0 0 10px
+
+		.btn-company 
+			min-width: 170px
+			background: linear-gradient(180deg, #28348B 0%, #1C287D 100%)
+			box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2)
+			border-radius: 5px
+
+		.optional 
+			font-size: 12px
+			line-height: 16px
+			text-transform: lowercase
+			margin: 30px 0 10px 
+
+
+/* FOOTER------------------------------------------------------------------------------------------------------------ */
+
+footer	
+	background: #28348B
+
+	.hetico-forms 
+		display: flex
+		justify-content: center
+
+		form 
+			width: 360px
+			display: flex
+			flex-direction: column
+			background: #18226F
+			box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2)
+			padding: 40px
+			margin-right: 85px
+
+		label,
+		input,
+		select 
+			width: 100%
+			padding: 5px 10px
+			border: 0
+			height: 40px
+			text-align: left
+
+
+
+		input,
+		select
+			border-radius: 5px
+			background: linear-gradient(180deg, #F8F8F8 0%, #EBEBEB 100%)
+			border: 1px solid #C1C1C1
+
+
+		label 
+			color: #FFFFFF
+			padding: 15px 0 5px
+
+
+		legend 
+			font-size: 14px
+			line-height: 19px
+			text-transform: uppercase
+			color: #FFFFFF
+			padding: 0 0 10px
+
+
+		a 
+			min-width: 175px
+			margin: 30px 0 50px
+
+/*2 block*/
+.hetico-forms .forms-wrapper 
+	max-width: 760px
+
+
+.hetico-forms .forms-wrapper .title-info 
+	font-size: 18px
+	line-height: 25px
+	color: #FFFFFF
+	margin: 60px 0 30px
+
+
+.forms-wrapper .adress h4,
+.forms-wrapper .adress  i,
+.forms-wrapper .adress p i 
+	color: #52AE32
+
+
+.forms-wrapper .adress a,
+.forms-wrapper .adress p 
+	font-weight: bold
+	font-size: 24px
+	line-height: 33px
+	text-transform: uppercase
+	color: #FFFFFF
+
+
+.forms-wrapper .adress h4
+	font-weight: bold
+	font-size: 36px
+	line-height: 49px
+	text-transform: uppercase
+
+
+.forms-wrapper .icon
+    font-size: 24px
+    line-height: 24px
+
+footer .copy 
+    background: #1C287D
+    padding: 15px 0
+
+
+.copy p,
+.copy a 
+    color: #7584ED
+    font-size: 12px
+    line-height: 16px
+    text-align: center

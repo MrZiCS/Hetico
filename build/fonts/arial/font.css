@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'ArialRoundedMTProCyr';
+  src: url('ArialRoundedMTProCyr.eot');
+  src: url('ArialRoundedMTProCyr.eot?#iefix') format('embedded-opentype'),
+       url('ArialRoundedMTProCyr.svg#ArialRoundedMTProCyr') format('svg'),
+       url('ArialRoundedMTProCyr.ttf') format('truetype'),
+       url('ArialRoundedMTProCyr.woff') format('woff'),
+       url('ArialRoundedMTProCyr.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
